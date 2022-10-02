@@ -1,3 +1,4 @@
 let a = 15,
-    b = "hello world";
+    b = "hello world",
+    c = "hello everyone";
     
