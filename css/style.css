@@ -1,4 +1,8 @@
-boby {
-    background-color: azure;
+body {
+    background-color: rgb(38, 172, 172);
     margin: 30px;
+}
+
+.wrapper {
+    background-color:  red;
 }
