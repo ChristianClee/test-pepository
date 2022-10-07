@@ -85,24 +85,33 @@
 
 
 let calc = {
-    inputNumbers:  function () {
-        this.firstDigit = + prompt('input first digit', '0');
-        this.secondDigit = + prompt('input second digit', '0');
-    },
     showSum() {
-        alert(this.getSum())
+        this.showAct("Summa");
+        this.inputNumbers();
+        let result = this.getSum();
+        alert(`summa of ${this.firstDigit} and ${this.secondDigit} equal ${result}`);
     },
     showMultiply() {
-        alert(this.getMultiply())
+        this.showAct("Multiply");
+        this.inputNumbers();
+        let result = this.getMultiply();
+        alert(`multiply of ${this.firstDigit} and ${this.secondDigit} equal ${result}`);
     },
     getSum() {
         return (this.firstDigit + this.secondDigit)
     },
     getMultiply() {
         return (this.firstDigit * this.secondDigit)
+    },
+    inputNumbers: function () {
+        this.firstDigit = + prompt('input first digit', '0');
+        this.secondDigit = + prompt('input second digit', '0');
+    },
+    showAct: function (text) {
+        alert(text)
     }
 }
 
-calc.inputNumbers();
+
 calc.showSum();
 calc.showMultiply();
